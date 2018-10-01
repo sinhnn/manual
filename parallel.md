@@ -14,7 +14,7 @@ cat ex.txt | parallel echo
 ```
 ## Manual
 ```bash
-# Step 1: Split files by split or sed
+# Step 1: Split files by split or sed or csplit
 split [-a|suffix-length=N] [-l|--lines=numberLinePerOutput] [-b|--bytes=bytesPerFile] ...
 sed "$startLine $endLine p"
 # Step 2: Run each splitted files in background
