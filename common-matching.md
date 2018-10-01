@@ -1,4 +1,7 @@
+[TOC]
+
 #### Matching repeated characters
+
 ```
 (.)\1{3,}
 ```
@@ -10,8 +13,8 @@
 ```
 (https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?
 ```
-### Matching list of words
+#### Matching list of words
 ```
 \b\(one\|two\|three\)\b
 ```
-### Lookaround (Lookahead and Lookbehind)
+#### Lookaround (Lookahead and Lookbehind)
