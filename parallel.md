@@ -7,11 +7,19 @@ find . -name -type d | xargs -I {} -n 1 -P 2 bash -c 'echo $*' -- {}
 ```
 
 ## [Parallel](https://www.gnu.org/software/parallel/parallel_tutorial.html)
+
+
 ```bash
 # parallel -j ${numbJob} -k -n ${numbArgsAtOnce} .... "cmd" ::: $listInPut
 parallel -j 2 -k -n 2 echo ::: A B C
 cat ex.txt | parallel echo 
+
+# {},{1},{2} Argument placeholder
+find . -name '*.jpg' | parallel convert -resize 512x384 {} {}_web.jpg
 ```
+[Guide with example](https://www.gnu.org/software/parallel/man.html)
+[Argument placeholders](https://www.biostars.org/p/63816/)
+[Argument placeholders](https://www.biostars.org/p/182136/)
 ## Manual
 ```bash
 # Step 1: Split files by split or sed or csplit
