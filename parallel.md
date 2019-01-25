@@ -4,6 +4,9 @@
 ```bash
 #xargs -P ${numbJob} -n ${numbArgsAtOnce} ...
 find . -name -type d | xargs -I {} -n 1 -P 2 bash -c 'echo $*' -- {}
+
+# Working with list of commands in file
+cat commands.txt | tr '\n' '\0' | xargs -0 -I {} bash -c '$*' -- {}
 ```
 
 ## [Parallel](https://www.gnu.org/software/parallel/parallel_tutorial.html)
@@ -16,6 +19,10 @@ cat ex.txt | parallel echo
 
 # {},{1},{2} Argument placeholder
 find . -name '*.jpg' | parallel convert -resize 512x384 {} {}_web.jpg
+
+# Working with list of commands in a file
+parallel --jobs 2 < commands.txt
+
 ```
 [Guide with example](https://www.gnu.org/software/parallel/man.html)
 [Argument placeholders](https://www.biostars.org/p/63816/)
