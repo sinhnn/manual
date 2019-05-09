@@ -1,5 +1,4 @@
 #### Matching repeated characters
-
 ```
 (.)\1{3,}
 ```
@@ -21,3 +20,4 @@
 ```
 egrep "((không|một|hai|ba|bốn|năm|lăm|sáu|bảy|tám|chín|mười|mươi)\s+){6,}" yourifle
 ```
+#### [Check spelling from custom dictionary](https://github.com/sinhnn/spellcheck-vietnamese) 
