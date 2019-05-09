@@ -17,7 +17,7 @@
 ```
 #### Lookaround (Lookahead and Lookbehind)
 
-###$ Matching vietnamese mobile number in string format
+#### Matching vietnamese mobile number in string format
 ```
 egrep "((không|một|hai|ba|bốn|năm|lăm|sáu|bảy|tám|chín|mười|mươi)\s+){6,}" yourifle
 ```
